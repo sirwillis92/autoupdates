@@ -19,9 +19,9 @@ SERVERURL=$(curl -s $LATESTURL | jq -r '.downloads.server.url')
 wget -q -O server.jar $SERVERURL
 echo up to date now
 
+#write the latest version into current_version
+echo $LATESTVER > current_version.txt
+
 else
 echo \*spiderman pointing meme\* same bro
 fi
-
-#write the latest version into current_version
-echo $LATESTVER > current_version.txt
